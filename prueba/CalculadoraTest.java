@@ -3,6 +3,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+
+
 class CalculadoraTest {
 
     @BeforeEach
@@ -47,5 +49,20 @@ class CalculadoraTest {
     public void testDividirNegativoPorPositivo() {
         Calculadora calculadora = new Calculadora();
         assertEquals(-2.0, calculadora.dividir(-6.0, 3.0));
+    public void testMultiplicar() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(6.0, calculadora.multiplicar(2.0, 3.0));
+    }
+
+    @Test
+    public void testMultiplicarPorCero() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(0.0, calculadora.multiplicar(2.0, 0.0));
+    }
+
+    @Test
+    public void testMultiplicarNegativoPorPositivo() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(-6.0, calculadora.multiplicar(-2.0, 3.0));
     }
 }
