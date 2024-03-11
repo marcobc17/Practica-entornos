@@ -13,6 +13,25 @@ class CalculadoraTest {
     void tearDown() {
     }
     @Test
+    public void testRestar() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(2.0, calculadora.restar(5.0, 3.0));
+    }
+
+    @Test
+    public void testRestarConNegativos() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(-5.0, calculadora.restar(-2.0, 3.0));
+    }
+
+    @Test
+    public void testRestarConCero() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(2.0, calculadora.restar(2.0, 0.0));
+    }
+
+}
+
     public void testDividir() {
         Calculadora calculadora = new Calculadora();
         assertEquals(2.0, calculadora.dividir(6.0, 3.0));
